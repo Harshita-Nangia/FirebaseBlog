@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lets Blog | Create</title>
-    <link rel="stylesheet" href="app.css">
+    <title>Lets Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
@@ -17,68 +16,37 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="blogs.html" > view all blogs </a>
+                <a class="nav-link" href="blogs.html" > View all blogs </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="create.html" > Create Blog </a>
+                <a class="nav-link" href="create.html"> Create Blog </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" > view my blogs </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html" onclick="logout()">Logout</a>
+              <a class="nav-link" href="index.html" >Logout</a>
             </li>
           </ul>
         </div>
       </nav>
     <main role="main">
-        <div class="container">
-            <div class="card m-4">
-              <div class="card-body">
-                <h2 class="pt-4">Create Post</h2>
-                <div class="form-group">
-                  <label for="Author">Author</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Author"
-                    id="author"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="Post Title">Post Title</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Post Title"
-                    id="postTitle"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="Post Content">Post Content</label>
-                  <textarea
-                    id="postContent"
-                    cols="30"
-                    rows="10"
-                    class="form-control"
-                    id="postContent"
-                  ></textarea>
-                </div>
-                <div class="form-group">
-                  <label for="Date">Date</label>
-                  <input type="date" class="form-control" id="postDate" />
-                </div>
-                <input
-                  type="submit"
-                  value="Post"
-                  class="btn btn-primary"
-                  id="submitBtn"
-                />
-              </div>
-            </div>
+        <!-- JUMBOTRON -->
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3 pt-4">Lets Blog</h1>
+            
           </div>
-          <!-- /container -->
-    </main>
+        </div>
+  
+        <div class="container">
+          <!-- Example row of columns -->
+          <div class="row" id="posts-collection"></div>
+  
+          <hr />
+        </div>
+        <!-- /container -->
+      </main>
     
 
 
@@ -95,6 +63,5 @@
     
     <!--Other scripts-->
     <script src="app.js"></script>
-    <script src="create.js"></script>
 </body>
 </html>

@@ -4,40 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Document</title>
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
 </head>
-<style>
-    body{
-       background-color:#e9ecef; ;
-    }
-</style>
 <body>
-    <body>
-        
-        <div id="formContainer"> 
-            <div class="container">
-             <input type="email" placeholder="Enter your email" id="email">  </input>
-             <input type="password" placeholder="Enter your password" id="password"> </input>
-      
-              <button onclick="signIn()"> Sign In</button><br><br>
-
-              <button onclick="googleSignIn()"> Sign in with Google </button>
-      
-              <h2 style="font-size: 1.5rem;">Do not have an account ? Sign up now</h2>
-
-              <button onclick="window.location.href='signup.html'" >Sign Up</button>
-
-              
-      
-            </div>
-       
-     </div>
-
-    </div>
-
+    <div id="formContainer"> 
+        <div class="container">
+            
+         <input type="text" placeholder="Enter your display name" id="name">  </input>
+         <input type="email" placeholder="Enter your email" id="email">  </input>
+         <input type="password" placeholder="Enter your password" id="password"> </input>
+  
+          <button onclick="signUp()"> Sign Up</button>
+  
+          <h2>Already have an account ? Sign in now</h2>
+          <button onclick="window.location.href='index.html'" >Sign In</button>
+  
+        </div>
+   
+ </div>
+    
     <!--Firebase scripts-->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
