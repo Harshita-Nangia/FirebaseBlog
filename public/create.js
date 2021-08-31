@@ -18,5 +18,7 @@ document.querySelector("#submitBtn").addEventListener("click", function() {
           postName: postTitle,
           postContent: postContent
         });
+        alert("Post created successfully!!")
+        window.location='blogs.html'
     }
   });

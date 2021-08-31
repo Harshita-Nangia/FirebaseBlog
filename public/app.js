@@ -17,6 +17,23 @@ var firebaseConfig = {
 
   const db = firebase.firestore();
   
+  initApp = function() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var currentUser = firebase.auth().currentUser;
+        console.log(currentUser);
+        console.log(currentUser.uid);
+
+      } else {
+    window.location = 'index.html';
+    // alert("Login first");
+      }
+    }, function(error) {
+      console.log(error);
+    });
+    
+  };
   function createPost(title,creator, time, content) {
     let div = document.createElement("div");
     div.setAttribute("class", "col-md-3");
@@ -59,3 +76,9 @@ var firebaseConfig = {
   }
   
   getPosts();
+
+  // logout
+  function logout(){
+    firebase.auth().signOut();
+    window.location='index.html';
+  }
